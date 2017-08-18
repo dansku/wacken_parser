@@ -7,6 +7,7 @@ import json
 
 # Wacken band website
 url = "http://www.wacken.com/en/bands/bands-billing/"
+outputFile = "wacken.json"
 
 # Get content
 page = requests.get(url)
@@ -41,5 +42,5 @@ for band in enumerate(bands[2:]):
     )
 
 # Save to file
-with open('data.json', 'w') as outfile:
+with open(outputFile, 'w') as outfile:
     json.dump(bandData, outfile)
