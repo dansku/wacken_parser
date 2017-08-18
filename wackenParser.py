@@ -34,7 +34,7 @@ for band in enumerate(bands[2:]):
   # Append data to the list
   bandData.append(
     {
-      'baneName':bandName,
+      'bandName':bandName,
       'bandImage':bandImage,
       'bandAddedOn':bandAddedOn,
       'bandUrl':bandUrl
