@@ -23,22 +23,22 @@ bandData = []
 # Band info starts on the 2nd item
 index = 1
 for band in enumerate(bands[2:]):
-	# Parse bands file
-	index = index + 1
-	bandName = bands[index].find_all("a")[1].get_text()
-	bandImage = bands[index].find("img")['src']
-	bandAddedOn = bands[index].find_all("span")[0].get_text().split()[1]
-	bandUrl = bands[index].find_all("a")[0]['href']
+  # Parse bands file
+  index = index + 1
+  bandName = bands[index].find_all("a")[1].get_text()
+  bandImage = bands[index].find("img")['src']
+  bandAddedOn = bands[index].find_all("span")[0].get_text().split()[1]
+  bandUrl = bands[index].find_all("a")[0]['href']
 
-	# Append data to the list
-	bandData.append(
-		{
-			'baneName':bandName,
-			'bandImage':bandImage,
-			'bandAddedOn':bandAddedOn,
-			'bandUrl':bandUrl
-		}
-		)
+  # Append data to the list
+  bandData.append(
+    {
+      'baneName':bandName,
+      'bandImage':bandImage,
+      'bandAddedOn':bandAddedOn,
+      'bandUrl':bandUrl
+    }
+    )
 
 # Save to file
 with open('data.json', 'w') as outfile:
