@@ -28,7 +28,7 @@ for band in enumerate(bands[2:]):
   index = index + 1
   bandName = bands[index].find_all("a")[1].get_text()
   bandImage = bands[index].find("img")['src']
-  bandAddedOn = bands[index].find_all("span")[0].get_text().split()[1]
+  bandAddedOn = bands[index].get_text().split(":",1)[1].lstrip()
   bandUrl = bands[index].find_all("a")[0]['href']
 
   # Append data to the list
